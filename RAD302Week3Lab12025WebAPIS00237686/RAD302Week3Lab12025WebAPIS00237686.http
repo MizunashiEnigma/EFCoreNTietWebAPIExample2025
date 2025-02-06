@@ -1,0 +1,6 @@
+@RAD302Week3Lab12025WebAPIS00237686_HostAddress = http://localhost:5284
+
+GET {{RAD302Week3Lab12025WebAPIS00237686_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

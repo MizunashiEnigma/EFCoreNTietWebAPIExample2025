@@ -22,9 +22,6 @@ namespace RAD302Week3Lab12025CL.S00237686
 
            // ActivityAPIClient.Track(StudentID: "S00237686", StudentName: "Tristan Cawley", activityName: "Rad302 Week 3 Lab 1", Task: "Creating Customer DB Schema");
 
-
-
-
             var connectionString = "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = CustomerCoreDB";
             optionsBuilder.UseSqlServer(connectionString)
                 .LogTo(Console.WriteLine,
