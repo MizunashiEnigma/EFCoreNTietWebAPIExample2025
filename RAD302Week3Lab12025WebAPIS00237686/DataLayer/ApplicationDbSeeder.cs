@@ -7,11 +7,14 @@ namespace RAD302Week3Lab12025WebAPIS00237686.DataLayer
         private readonly ApplicationDbContext _ctx;
 
         private readonly UserManager<ApplicationUser> _userManager;
+        
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public ApplicationDbSeeder(ApplicationDbContext ctx, UserManager<ApplicationUser> userManager)
+        public ApplicationDbSeeder(ApplicationDbContext ctx, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _ctx = ctx;
             _userManager = userManager;
+            _roleManager = roleManager;
         }
 
         public async Task Seed()
