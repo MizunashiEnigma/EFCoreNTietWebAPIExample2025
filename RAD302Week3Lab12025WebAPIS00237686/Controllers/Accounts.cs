@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using RAD302Week3Lab12025WebAPIS00237686.DataLayer;
+using RAD302Week3Lab12025WebAPIS00237686.ViewModel;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -83,5 +84,22 @@ namespace RAD302Week3Lab12025WebAPIS00237686.Controllers
             }
             return BadRequest();
         }
+        [HttpPost("/register")]
+        public async Task<IActionResult> Register([FromBody] RegisterViewModel model)
+        {
+            var user = new ApplicationUser
+            {
+                FirstName = model.Fname,
+                UserName = model.Email,
+                Email = model.Email,
+                EmailConfirmed = true,
+                LastName = model.Sname,
+                SecurityStamp = Guid.NewGuid().ToString()
+            };
+
+            var result = await _userManager.CreateAsync(user, model.Password);
+            return Created("", result.Succeeded);
+        }
+
     }
 }
