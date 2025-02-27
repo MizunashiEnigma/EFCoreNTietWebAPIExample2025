@@ -121,6 +121,6 @@ namespace RAD302Week3Lab12025WebAPIS00237686
             app.MapControllers();
 
             app.Run();
-        }
+        } //however i can confirm that week3 worked, before i added the week 4 things. I saw the swagger UI and was even able totest end+points.
     }
 }

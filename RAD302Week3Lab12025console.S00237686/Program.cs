@@ -33,20 +33,20 @@ namespace RAD302Week3Lab12025console.S00237686
                     Console.WriteLine($"ID: {c.ID}, Name: {c.Name}, Credit Rating: {c.CreditRating}");
                 }
 
-                //Console.WriteLine("\nAdding a new customer...");
-                //int maxId = db.Customer.Max(c => c.ID);
+                Console.WriteLine("\nAdding a new customer...");
+                int maxId = db.Customer.Max(c => c.ID);
 
-                //Customer newCustomer = new Customer
-                //{
-                //    ID = maxId + 1,
-                //    Name = "New Customer",
-                //    Address = "123 New Street, City",
-                //    CreditRating = 500.0f
-                //};
+                Customer newCustomer = new Customer
+                {
+                    ID = maxId + 1,
+                    Name = "New Customer",
+                    Address = "123 New Street, City",
+                    CreditRating = 500.0f
+                };
 
-                //db.Customer.Add(newCustomer);
-                //db.SaveChanges();
-                //Console.WriteLine($"New customer added with ID: {newCustomer.ID}");
+                db.Customer.Add(newCustomer);
+                db.SaveChanges();
+                Console.WriteLine($"New customer added with ID: {newCustomer.ID}");
             }
 
             Console.WriteLine("\nOperation completed. Press any key to exit.");
