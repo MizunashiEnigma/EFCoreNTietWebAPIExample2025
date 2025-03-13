@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductModel
+namespace Week8ProductModelS00237686
 {
     public class ProductRepository : IProduct<Product>, IDisposable
     {

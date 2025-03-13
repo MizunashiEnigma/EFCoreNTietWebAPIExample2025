@@ -1,12 +1,15 @@
+using Tracker.WebAPIClient;
+using Week8ProductModelS00237686;
 
-using ProductModel;
-
-namespace ProductWebAPI2025
+namespace Week8ProductWebAPI2025S00237686
 {
     public class Program
     {
         public static void Main(string[] args)
         {
+
+            ActivityAPIClient.Track(StudentID: "S00237686", StudentName: "Tristan Cawley", activityName: "RAD30223 Week 8 Lab 1", Task: "Running Web API");
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.

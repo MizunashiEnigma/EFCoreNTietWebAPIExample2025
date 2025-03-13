@@ -1,9 +1,9 @@
-﻿using ProductModel;
-using System;
+﻿using System;
 using System.Globalization;
 using System.Threading;
+using Week8ProductModelS00237686;
 
-namespace ProductConsoleApp
+namespace Week8BlazorDataServiceS00237686
 {
     class Program
     {
@@ -15,7 +15,7 @@ namespace ProductConsoleApp
             using (ProductDBContext db = new ProductDBContext())
             {
                 foreach (Product product in db.Products)
-                    Console.WriteLine("{0} Costs {1:C} ", product.Description,  product.UnitPrice);
+                    Console.WriteLine("{0} Costs {1:C} ", product.Description, product.UnitPrice);
             }
         }
     }

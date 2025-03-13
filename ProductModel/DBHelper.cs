@@ -9,13 +9,13 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductModel
+namespace Week8ProductModelS00237686
 {
     public static class DBHelper
     {
         public static List<T> Get<T>(string resourceName)
         {
-            {   
+            {
                 using (StreamReader reader = new StreamReader(resourceName, Encoding.UTF8))
                 {
                     CsvReader csvReader = new CsvReader(reader, CultureInfo.InvariantCulture);
@@ -94,5 +94,4 @@ namespace ProductModel
         }
     }
 
-}
 }

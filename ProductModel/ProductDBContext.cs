@@ -6,22 +6,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace ProductModel
+namespace Week8ProductModelS00237686
 {
     public class ProductDBContext : DbContext
     {
-         public DbSet<Product> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         static public bool inProduction;
         public ProductDBContext()
         {
-            
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
-            var myconnectionstring = "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = ProductCoreDB-2025";
+
+            var myconnectionstring = "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = Week8ProductCoreDB-2025-S00237686";
             optionsBuilder.UseSqlServer(myconnectionstring)
               .LogTo(Console.WriteLine,
                      new[] { DbLoggerCategory.Database.Command.Name },

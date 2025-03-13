@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductModel
+namespace Week8ProductModelS00237686
 {
     public interface IProduct<T> : IRepository<T> where T : Product
     {

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace ProductModel
+namespace Week8ProductModelS00237686
 {
     public class Product
     {

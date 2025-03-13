@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductModel
+namespace Week8ProductModelS00237686
 {
-    public class Map : ClassMap<Product>  
+    public class Map : ClassMap<Product>
     {
         public Map()
         {

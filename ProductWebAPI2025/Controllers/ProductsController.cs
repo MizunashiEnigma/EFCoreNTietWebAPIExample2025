@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ProductModel;
 using ProductWebAPI2025.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Week8ProductModelS00237686;
 
 namespace ProductWepAPI.Controllers
 {
