@@ -7,6 +7,7 @@ namespace Week8ProductWebAPI2025S00237686.Controllers
     public class GRNController : Controller
     {
         private readonly IGRN<GRN> _repository;
+        //this for the correct test name.
         public GRNController(IGRN<GRN> repository)
         {
             _repository = repository;
