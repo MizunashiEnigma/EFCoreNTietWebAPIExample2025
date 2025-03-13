@@ -11,6 +11,8 @@ namespace Week8ProductModelS00237686
     public class ProductDBContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<GrnLine> GrnLines { get; set; }
+        public DbSet<GRN> GRNs { get; set; }
 
         static public bool inProduction;
         public ProductDBContext()
@@ -38,7 +40,12 @@ namespace Week8ProductModelS00237686
             if (!inProduction)
             {
                 Product[] products = DBHelper.Get<Product>(@"..\ProductModel\Products.csv").ToArray();
+                GRN[] gRNs = DBHelper.Get<GRN>(@"..\ProductModel\GRN with Headings.csv").ToArray();
+                GrnLine[] gRNLines = DBHelper.Get<GrnLine>(@"..\ProductModel\GRN lines with Headings.csv").ToArray();
+               
                 modelBuilder.Entity<Product>().HasData(products);
+                modelBuilder.Entity<GRN>().HasData(gRNs);
+                modelBuilder.Entity<GrnLine>().HasData(gRNLines);
             }
             //modelBuilder.Entity<Product>().HasData(
             // new Product
